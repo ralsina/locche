@@ -15,19 +15,21 @@
 <textarea id="thisislocche" cols="80" rows="20" style="display: none;"></textarea>
 <button onCLick="do_paste()">Paste!</button>
 <script>
-var pastedata = 'PASTEDATA';
 var markup = document.documentElement.innerHTML;
 $('#thisislocche').val(markup);
+pastedata = 'WRITE HERE';
 
 var editor = CodeMirror(document.body, {
-    value: pastedata == 'PASTEDATA' ? '' : pastedata
+    value: pastedata
 });
 
 function do_paste() {
     // Get the value from the editor and "save it"
     data = editor.getDoc().getValue();
-    $('#thisislocche').val($('#thisislocche').val().replace('PASTEDATA', data))
-    bdata = window.btoa($('#thisislocche').val())
+    old_locche = $('#thisislocche').val()
+    new_locche = old_locche.replace(RegExp("pastedata = '.*';"), "pastedata = '"+data+"';")
+    alert(new_locche)
+    bdata = window.btoa(new_locche)
     window.location = 'data:text/html;base64,'+ bdata
 }
 
