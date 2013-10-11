@@ -12,6 +12,7 @@
 </head>
 <body>
 <h1>Locche!</h1>
+<a href="#magic" id="older">Previous version</a>
 <textarea id="thisislocche" cols="80" rows="20" style="display: none;"></textarea>
 <button onCLick="do_paste()">Paste!</button>
 <script>
@@ -28,11 +29,10 @@ function do_paste() {
     data = editor.getDoc().getValue();
     old_locche = $('#thisislocche').val()
     new_locche = old_locche.replace(RegExp("pastedata = '.*';"), "pastedata = '"+data+"';")
-    alert(new_locche)
+    new_locche = new_locche.replace(RegExp("<a href=.*Previous version</a>"), '<a href="'+window.location+'" id="older">Previous version</a>')
     bdata = window.btoa(new_locche)
     window.location = 'data:text/html;base64,'+ bdata
 }
-
 
 </script>
 </body>
