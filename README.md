@@ -8,7 +8,7 @@ You can start using it from http://tinyurl.com/locche1
 Some neat features:
 
 * You can hack Locche inside Locche.
-* You can go back to previous versions of the text
+* You can go back to previous versions of the text (or Locche) from any copy of Locche
 * It uses no server whatsoever (other than a CDN to get JS and codemirror)
 
 What's missing?
