@@ -18,7 +18,7 @@
 <script>
 var markup = document.documentElement.innerHTML;
 $('#thisislocche').val(markup);
-pastedata = 'WRITE HERE';
+pastedata = '"WRITE HERE"';
 
 var editor = CodeMirror(document.body, {
     value: pastedata
@@ -28,7 +28,7 @@ function do_paste() {
     // Get the value from the editor and "save it"
     data = editor.getDoc().getValue();
     old_locche = $('#thisislocche').val()
-    new_locche = old_locche.replace(RegExp("pastedata = '.*';"), "pastedata = '"+data+"';")
+    new_locche = old_locche.replace(RegExp("pastedata = '.*';"), "pastedata = '"+JSON.stringify(data)+"';")
     new_locche = new_locche.replace(RegExp("<a href=.*Previous version</a>"), '<a href="'+window.location+'" id="older">Previous version</a>')
     bdata = window.btoa(new_locche)
     window.location = 'data:text/html;base64,'+ bdata
