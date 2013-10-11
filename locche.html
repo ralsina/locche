@@ -12,11 +12,17 @@
 </head>
 <body>
 <h1>Locche!</h1>
-
+<button onCLick="do_paste()">Paste!</button>
 <script>
-  var editor = CodeMirror(document.body, {
+
+var editor = CodeMirror(document.body, {
     value: "Foo"
-  });
+});
+
+function do_paste() {
+    alert(editor.getDoc().getValue());
+}
+
 </script>
 </body>
 </html>
