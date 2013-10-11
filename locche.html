@@ -12,9 +12,12 @@
 </head>
 <body>
 <h1>Locche!</h1>
-<div id="thisislocche">tl</div>
+<textarea id="thisislocche">tl</textarea>
 <button onCLick="do_paste()">Paste!</button>
 <script>
+
+var markup = document.documentElement.innerHTML;
+$('#thisislocche').val(markup);
 
 var editor = CodeMirror(document.body, {
     value: "Foo"
@@ -24,7 +27,6 @@ function do_paste() {
     alert(editor.getDoc().getValue());
 }
 
-$("#thisislocche").html(document.documentElement.innerHTML);
 
 </script>
 </body>
