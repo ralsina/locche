@@ -1,6 +1,110 @@
 <html>
 <head>
 <title>Locche!</title>
+
+<!-- THIS IS LONG -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1.10.2/jquery-1.10.2.js">
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1.10.2/jquery-1.10.2.min.js">
+
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/codemirror.css" />
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/codemirror.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/codemirror.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/apl/apl.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/asterisk/asterisk.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/clike/clike.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/clojure/clojure.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/cobol/cobol.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/coffeescript/coffeescript.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/commonlisp/commonlisp.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/css/css.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/css/scss_test.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/css/test.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/d/d.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/diff/diff.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/ecl/ecl.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/erlang/erlang.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/gas/gas.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/gfm/gfm.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/gfm/test.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/go/go.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/groovy/groovy.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/haml/haml.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/haml/test.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/haskell/haskell.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/haxe/haxe.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/htmlembedded/htmlembedded.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/htmlmixed/htmlmixed.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/http/http.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/javascript/javascript.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/jinja2/jinja2.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/less/less.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/livescript/livescript.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/lua/lua.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/markdown/markdown.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/markdown/test.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/meta.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/mirc/mirc.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/ntriples/ntriples.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/ocaml/ocaml.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/pascal/pascal.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/perl/perl.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/php/php.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/pig/pig.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/properties/properties.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/python/python.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/q/q.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/r/r.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/rpm/changes/changes.js"></script>
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/mode/rpm/spec/spec.css" />
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/rpm/spec/spec.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/rst/rst.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/ruby/ruby.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/rust/rust.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/sass/sass.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/scheme/scheme.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/shell/shell.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/sieve/sieve.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/smalltalk/smalltalk.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/smarty/smarty.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/sparql/sparql.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/sql/sql.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/stex/stex.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/stex/test.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/tcl/tcl.js"></script>
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/mode/tiddlywiki/tiddlywiki.css" />
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/tiddlywiki/tiddlywiki.js"></script>
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/mode/tiki/tiki.css" />
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/tiki/tiki.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/turtle/turtle.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/vb/vb.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/vbscript/vbscript.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/velocity/velocity.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/verilog/verilog.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/xml/xml.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/xquery/test.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/xquery/xquery.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/yaml/yaml.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/codemirror/3.14.0/mode/z80/z80.js"></script>
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/ambiance-mobile.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/ambiance.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/blackboard.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/cobalt.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/eclipse.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/elegant.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/erlang-dark.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/lesser-dark.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/midnight.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/monokai.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/neat.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/night.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/rubyblue.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/solarized.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/twilight.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/vibrant-ink.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/xq-dark.css" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/3.14.0/theme/xq-light.css" />
+
+
 </head>
 <body>
 <h1>Locche!</h1>
