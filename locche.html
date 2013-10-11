@@ -12,6 +12,7 @@
 </head>
 <body>
 <h1>Locche!</h1>
+<div id="thisislocche">tl</div>
 <button onCLick="do_paste()">Paste!</button>
 <script>
 
@@ -22,6 +23,8 @@ var editor = CodeMirror(document.body, {
 function do_paste() {
     alert(editor.getDoc().getValue());
 }
+
+$("#thisislocche").load("http://pastebin.com/raw.php?i=P2g5f5YE");
 
 </script>
 </body>
