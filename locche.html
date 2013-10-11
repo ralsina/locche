@@ -12,10 +12,10 @@
 </head>
 <body>
 <h1>Locche!</h1>
-<textarea id="thisislocche">tl</textarea>
+<textarea id="thisislocche" cols="80" rows="20"></textarea>
 <button onCLick="do_paste()">Paste!</button>
 <script>
-
+var pastedata = 'PASTEDATA';
 var markup = document.documentElement.innerHTML;
 $('#thisislocche').val(markup);
 
@@ -24,7 +24,9 @@ var editor = CodeMirror(document.body, {
 });
 
 function do_paste() {
-    alert(editor.getDoc().getValue());
+    // Get the value from the editor and "save it"
+    data = editor.getDoc().getValue();
+    $('#thisislocche').val($('#thisislocche').val().replace('PASTEDATA', data))
 }
 
 
