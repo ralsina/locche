@@ -1,35 +1,30 @@
 <html>
 <head>
 <title>Locche!</title>
-<link type="text/css" rel="stylesheet" href="http://cdn.jsdelivr.net/codemirror/3.14.0/codemirror.css" />
-
-<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1.10.2/jquery-1.10.2.js">
-<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1.10.2/jquery-1.10.2.min.js">
-
-<script type="text/javascript" src="http://cdn.jsdelivr.net/codemirror/3.14.0/codemirror.js"></script>
-<script type="text/javascript" src="http://cdn.jsdelivr.net/codemirror/3.14.0/codemirror.min.js"></script>
-
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1.10.2/jquery-1.10.2.min.js"></script>
 </head>
 <body>
 <h1>Locche!</h1>
-<a href="#magic" id="older">Previous version</a>
+<a href="#magic" id="older">See the previous version of this text.</a></br>
+<textarea id="editor" cols="80" rows="20"></textarea>
+</br>
 <textarea id="thisislocche" cols="80" rows="20" style="display: none;"></textarea>
+</br>
+<button onClick="$('#thisislocche').show(1000)">Edit Locche Itself</button>
 <button onCLick="do_paste()">Paste!</button>
 <script>
 var markup = document.documentElement.innerHTML;
 $('#thisislocche').val(markup);
-pastedata = '"WRITE HERE"';
-
-var editor = CodeMirror(document.body, {
-    value: pastedata
-});
+pastedata = 'WRITE HERE';
+$('#editor').val(pastedata);
 
 function do_paste() {
     // Get the value from the editor and "save it"
-    data = editor.getDoc().getValue();
+    data = JSON.stringify($('#editor').val()).substr(1);
+    data = data.substr(0,data.length-1); // The substrs are to remove quotes
     old_locche = $('#thisislocche').val()
-    new_locche = old_locche.replace(RegExp("pastedata = '.*';"), "pastedata = '"+JSON.stringify(data)+"';")
-    new_locche = new_locche.replace(RegExp("<a href=.*Previous version</a>"), '<a href="'+window.location+'" id="older">Previous version</a>')
+    new_locche = old_locche.replace(RegExp("pastedata = '.*';"), "pastedata = '"+data+"';")
+    new_locche = new_locche.replace(RegExp("^<a href=.*Previous version</a>"), '<a href="'+window.location+'" id="older">Previous version</a>')
     bdata = window.btoa(new_locche)
     window.location = 'data:text/html;base64,'+ bdata
 }
