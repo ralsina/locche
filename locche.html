@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>Locche!</h1>
-<a href="#magic" id="older">See the previous version of this text.</a></br>
+<a href="#magic" id="older">Previous version</a></br>
 <textarea id="editor" cols="80" rows="20"></textarea>
 </br>
 <textarea id="thisislocche" cols="80" rows="20" style="display: none;"></textarea>
@@ -24,11 +24,11 @@ function do_paste() {
     data = data.substr(0,data.length-1); // The substrs are to remove quotes
     old_locche = $('#thisislocche').val()
     new_locche = old_locche.replace(RegExp("pastedata = '.*';"), "pastedata = '"+data+"';")
-    new_locche = new_locche.replace(RegExp("^<a href=.*Previous version</a>"), '<a href="'+window.location+'" id="older">Previous version</a>')
+    new_locche = new_locche.replace(RegExp("<a href=.*revious.*</a>"), '<a href="'+window.location+'" id="older">Previous version</a>')
+    console.log(new_locche);
     bdata = window.btoa(new_locche)
     window.location = 'data:text/html;base64,'+ bdata
 }
-
 </script>
 </body>
 </html>
